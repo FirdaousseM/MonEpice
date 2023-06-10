@@ -23,12 +23,20 @@
       <li>
       <a href="{{ '/product' }}">Products</a>
     </li>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <li>
+      <a href="{{ '/logout' }}">Déconnexion</a>
+    </li>     
+    {% else %}
     <li>
       <a href="{{ '/register' }}">Inscription</a>
     </li>
     <li>
       <a href="{{ '/login' }}">Connexion</a>
     </li>
+    {% endif %}
+    
+
     <li>
       <a href="{{ '/user' }}">User</a>
     </li>
