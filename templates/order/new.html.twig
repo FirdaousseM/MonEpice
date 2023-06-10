@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Order
+{% endblock %}
+
+{% block body %}
+	<h1>Commande</h1>
+
+  {{ include('user/show.html.twig') }}
+
+	<a href="{{ path('app_order_index') }}">back to list</a>
+{% endblock %}
+

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index
+{% endblock %}
+
+{% block body %}
+	<h1>Admin Dashboard</h1>
+
+	<div class="dashboard__content">
+		<div>
+			<h2>Les produits</h2>
+			{{ include('product/products_list.html.twig') }}
+			<a href="{{ path('app_product_new') }}">Ajouter un produit</a>
+		</div>
+		<div>
+			<h2>Les catégories</h2>
+			{{ include('category/categories_list.html.twig') }}
+			<a href="{{ path('app_category_new') }}">Créer une catégorie</a>
+		</div>
+	</div>
+{% endblock %}
+

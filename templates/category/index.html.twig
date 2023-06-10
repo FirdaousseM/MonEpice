@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les catégories
+{% endblock %}
+
+{% block body %}
+	<h1>Les catégories</h1>
+
+	{{ include('category/categories_list.html.twig') }}
+
+	<a href="{{ path('app_category_new') }}">Créer une catégorie</a>
+{% endblock %}
+

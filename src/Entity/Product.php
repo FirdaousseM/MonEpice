@@ -37,6 +37,9 @@ class Product
     #[ORM\OneToMany(mappedBy: 'product', targetEntity: CommandLine::class)]
     private Collection $commandLines;
 
+    #[ORM\Column(length: 255)]
+    private ?string $imagePath = null;
+
     public function __construct()
     {
         $this->media = new ArrayCollection();
@@ -164,6 +167,18 @@ class Product
                 $commandLine->setProduct(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImagePath(): ?string
+    {
+        return $this->imagePath;
+    }
+
+    public function setImagePath(string $imagePath): self
+    {
+        $this->imagePath = $imagePath;
 
         return $this;
     }

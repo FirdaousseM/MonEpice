@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<header class="main-menu">
+  <ul>
+    <li>
+      <a href="{{ '/' }}">Home</a>
+    </li>
+    <li>
+      <a href="{{ '/address' }}">Adresses</a>
+    </li>
+      <li>
+      <a href="{{ '/category' }}">Catégories</a>
+    </li>
+      <li>
+      <a href="{{ '/order' }}">Commandes</a>
+    </li>
+      <li>
+      <a href="{{ '/product' }}">Products</a>
+    </li>
+    <li>
+      <a href="{{ '/register' }}">Inscription</a>
+    </li>
+    <li>
+      <a href="{{ '/login' }}">Connexion</a>
+    </li>
+    <li>
+      <a href="{{ '/user' }}">User</a>
+    </li>
+    <li>
+      <a href="{{ '/admin' }}">Admin</a>
+    </li>
+  </ul>
+</header>
+{% endblock %}
+

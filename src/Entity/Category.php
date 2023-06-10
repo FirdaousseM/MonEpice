@@ -27,6 +27,9 @@ class Category
     #[ORM\OneToMany(mappedBy: 'category', targetEntity: Media::class)]
     private Collection $media;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $imagePath = null;
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
@@ -120,5 +123,22 @@ class Category
         }
 
         return $this;
+    }
+
+    public function getImagePath(): ?string
+    {
+        return $this->imagePath;
+    }
+
+    public function setImagePath(?string $imagePath): self
+    {
+        $this->imagePath = $imagePath;
+
+        return $this;
+    }
+
+    function __toString()
+    {
+      return $this->name;
     }
 }

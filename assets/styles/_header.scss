@@ -1,0 +1,21 @@
+header.main-menu {
+  font-size: 1rem;
+  width: 100%;
+  background-color: rgb(235, 188, 253);
+  ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: stretch;
+    padding: 1em 0;
+  }
+  a {
+    text-decoration: none;
+    font-size: 1.7em;
+  }
+  li:hover {
+    background: tomato;
+
+  }
+
+}

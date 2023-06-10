@@ -1,0 +1,12 @@
+{% for product in products %}
+	<div class="product">
+		<a href="{{ path('app_product_show', {'id': product.id}) }}">
+			<img class="categories__category-img" src="{{asset(product.imagePath)}}" alt="{{product.imagePath}}"/>
+			<h3>{{ product.name }}</h3>
+			<span>{{ product.price }} €</span>
+			<span>{{ product.available ? 'en stock' : '' }}</span>
+		</a>
+	</div>
+{% else %}
+	<h3>Il n'existe aucun produit, créez en un.</h3>
+{% endfor %}
